@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <script>
+        // Función que reemplaza a la librería externa
+        function calcularPorcentaje(precio) {
+            let producto = {
+                precio: precio,
+                porcentajeAplicado: 0,
+                aumento: 0,
+                precioFinal: 0
+            };
+
+            if (precio < 60) {
+                producto.porcentajeAplicado = 20;
+                producto.aumento = (precio * 20) / 100;
+            } else if (precio < 100) {
+                producto.porcentajeAplicado = 15;
+                producto.aumento = (precio * 15) / 100;
+            } else {
+                producto.porcentajeAplicado = 10;
+                producto.aumento = (precio * 10) / 100;
+            }
+            
+            producto.precioFinal = producto.precio + producto.aumento;
+            return producto;
+        }
+
+        let bandera = 0;
+
+        while (bandera === 0) {
+            let precio = Number(prompt("Ingrese el precio a calcular:"));
+            
+            while (precio <= 0 || isNaN(precio)) {
+                alert("El precio ingresado no es válido. Por favor, ingrese un valor mayor a 0.");
+                precio = Number(prompt("Ingrese el precio a calcular:"));
+            } 
+
+            // Ejecución de la función
+            let producto = calcularPorcentaje(precio);
+                
+            console.log(`\n--- RESULTADOS DESPUÉS DEL PROCEDIMIENTO ---`);
+            console.log(`Porcentaje aplicado: ${producto.porcentajeAplicado}%`);
+            console.log(`Aumento calculado: $${producto.aumento}`);
+            console.log(`Precio actualizado: $${producto.precioFinal}\n`);
+            
+            // Conrtrol de salida del bucle
+            bandera = Number(prompt("Ingrese 0 para continuar o cualquier otro número para salir:"));
+        }
+    </script>
+</body>
+</html>
