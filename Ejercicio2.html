@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+</head>
+
+<body>
+  <p id="resultado"></p>
+  <script type="module">
+    import { seleccionDeConversion, convertirMoneda } from './miLibreriaEJ2.js';
+    let impuesto = 2 / 100;
+
+    const salida = document.getElementById('resultado');
+    let opcion = parseInt(prompt("Ingrese la opción de conversión: \n1. Dolares a Pesos\n2. Euros a Pesos\n3. Libras a Pesos\n4. Yen a Pesos\n5. Real a Pesos"));
+    let tasa = seleccionDeConversion(opcion);
+    salida.textContent = tasa === 0
+      ? 'Opción no válida.'
+      : 'Tasa de conversión: ' + tasa;
+
+    let monto = parseFloat(prompt("Ingrese el monto a convertir:"));
+    let montoConvertido = convertirMoneda(monto, tasa);
+    let montoConImpuesto = montoConvertido > 20000 ? Number(montoConvertido * (1 + impuesto)).toFixed(2) : "No aplica";
+    salida.textContent += ' | Resultado de la conversión: ' + montoConvertido;
+    salida.textContent += ' | Monto con impuesto: ' + montoConImpuesto;
+
+  </script>
+</body>
+
+</html>
