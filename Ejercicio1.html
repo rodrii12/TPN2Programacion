@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Concatenar cadenas</title>
+</head>
+<body>
+  <script type="module">
+    import { concatenarCadenas } from "./miLibreria.js";
+
+    let cadena1 = prompt("Ingresá la primera cadena:");
+    let cadena2 = prompt("Ingresá la segunda cadena:");
+
+    let datos = {
+      primera: cadena1,
+      segunda: cadena2,
+      resultado: ""
+    };
+
+    concatenarCadenas(datos);
+
+    console.log("Cadenas concatenadas:", datos.resultado);
+    alert("Resultado: " + datos.resultado);
+  </script>
+</body>
+</html>

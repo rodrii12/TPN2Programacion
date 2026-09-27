@@ -12,3 +12,8 @@ export function calcularPorcentaje(producto) {
     
     producto.precioFinal = producto.precio + producto.aumento;
 }
+
+
+export function concatenarCadenas(datos) {
+  datos.resultado = datos.primera + " " + datos.segunda;
+}
