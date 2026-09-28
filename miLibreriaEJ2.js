@@ -16,6 +16,9 @@ export function seleccionDeConversion(opcion){
     case 5:
       tasaConversion = 290.15;
       break;
+    case 6:
+      tasaConversion = 213.31;
+      break;
     default:
       tasaConversion = 0;
       break;

@@ -13,7 +13,7 @@
     import { seleccionDeConversion, convertirMoneda } from './miLibreriaEJ2.js';
     let impuesto = 2 / 100;
 
-    let opcion = parseInt(prompt("Ingrese la opción de conversión: \n1. Dolares a Pesos\n2. Euros a Pesos\n3. Libras a Pesos\n4. Yen a Pesos\n5. Real a Pesos"));
+    let opcion = parseInt(prompt("Ingrese la opción de conversión: \n1. Dolares a Pesos\n2. Euros a Pesos\n3. Libras a Pesos\n4. Yen a Pesos\n5. Real a Pesos\n6. Yuan a Pesos"));
     let tasa = seleccionDeConversion(opcion);
     console.log(tasa === 0
       ? 'Opción no válida.'
