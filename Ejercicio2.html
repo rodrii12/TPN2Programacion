@@ -10,20 +10,35 @@
 <body>
   <p id="resultado"></p>
   <script type="module">
-    import { seleccionDeConversion, convertirMoneda } from './miLibreriaEJ2.js';
+    import { seleccionDeConversion, convertirMoneda, agregarTasas } from './miLibreriaEJ2.js';
     let impuesto = 2 / 100;
+    let continuar, opcion, tasa;
+    let monto, montoConvertido, montoConImpuesto;
+    let tasas = {
+      dolares: 0,
+      euros: 0,
+      libras: 0,
+      yen: 0,
+      real: 0,
+      yuan: 0
+    }
+    agregarTasas(tasas);
 
-    let opcion = parseInt(prompt("Ingrese la opción de conversión: \n1. Dolares a Pesos\n2. Euros a Pesos\n3. Libras a Pesos\n4. Yen a Pesos\n5. Real a Pesos\n6. Yuan a Pesos"));
-    let tasa = seleccionDeConversion(opcion);
-    console.log(tasa === 0
-      ? 'Opción no válida.'
-      : 'Tasa de conversión: ' + tasa);
+    do {
+      opcion = parseInt(prompt("Ingrese la opción de conversión (1: Dólares, 2: Euros, 3: Libras, 4: Yen, 5: Real, 6: Yuan):"));
+      tasa = seleccionDeConversion(opcion, tasas);
+      console.log(tasa === 0
+        ? 'Opción no válida.'
+        : 'Tasa de conversión: ' + tasa);
 
-    let monto = parseFloat(prompt("Ingrese el monto a convertir:"));
-    let montoConvertido = convertirMoneda(monto, tasa);
-    let montoConImpuesto = montoConvertido > 20000 ? Number(montoConvertido * (1 + impuesto)).toFixed(2) : "No aplica";
-    console.log(' | Resultado de la conversión: ' + montoConvertido);
-    console.log(' | Monto con impuesto: ' + montoConImpuesto);
+      monto = parseFloat(prompt("Ingrese el monto a convertir:"));
+      montoConvertido = convertirMoneda(monto, tasa);
+      montoConImpuesto = montoConvertido > 20000 ? Number(montoConvertido * (1 + impuesto)).toFixed(2) : "No aplica";
+      console.log(' | Resultado de la conversión: ' + montoConvertido);
+      console.log(' | Monto con impuesto: ' + montoConImpuesto);
+      continuar = prompt('Ingrese 1 para continuar');
+    } while (continuar === '1');
+
 
   </script>
 </body>

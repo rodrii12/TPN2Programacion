@@ -1,23 +1,23 @@
-export function seleccionDeConversion(opcion){
+export function seleccionDeConversion(opcion , tasas){
   let tasaConversion;
   switch(opcion){
     case 1:
-      tasaConversion = 1530.79;
+      tasaConversion = tasas.dolares;
       break;
     case 2:
-      tasaConversion = 1742.07;
+      tasaConversion = tasas.euros;
       break;
     case 3:
-      tasaConversion = 2017.19;
+      tasaConversion = tasas.libras;
       break;
     case 4:
-      tasaConversion = 11.45;
+      tasaConversion = tasas.yen;
       break;
     case 5:
-      tasaConversion = 290.15;
+      tasaConversion = tasas.real;
       break;
     case 6:
-      tasaConversion = 213.31;
+      tasaConversion = tasas.yuan;
       break;
     default:
       tasaConversion = 0;
@@ -25,6 +25,16 @@ export function seleccionDeConversion(opcion){
   }
   return tasaConversion;
 }
+
+export function agregarTasas(tasas){
+  tasas.dolares = parseFloat(prompt("Ingrese la tasa para dólares:", tasas.dolares));
+  tasas.euros = parseFloat(prompt("Ingrese la tasa para euros:", tasas.euros));
+  tasas.libras = parseFloat(prompt("Ingrese la tasa para libras:", tasas.libras));
+  tasas.yen = parseFloat(prompt("Ingrese la tasa para yen:", tasas.yen));
+  tasas.real = parseFloat(prompt("Ingrese la tasa para real:", tasas.real));
+  tasas.yuan = parseFloat(prompt("Ingrese la tasa para yuan:", tasas.yuan));
+}
+
 
 export function convertirMoneda(monto, tasa){
   return monto * tasa;
