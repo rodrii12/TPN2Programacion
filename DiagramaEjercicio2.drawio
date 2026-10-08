@@ -40,17 +40,22 @@
         <mxCell id="taxCheck" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=12;" value="montoConvertido &amp;gt; 20000" vertex="1">
           <mxGeometry height="95" width="150" x="270" y="1260" as="geometry" />
         </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-15" edge="1" parent="1" source="taxCalc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="sjjGBm7Yn_UY-a6S30rn-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="565" y="1590" />
+              <mxPoint x="335" y="1590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="taxCalc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=12;" value="Calcular impuesto del 2%&#xa;montoConImpuesto = montoConvertido × 1.02&#xa;Formatear con 2 decimales" vertex="1">
-          <mxGeometry height="90" width="230" x="450" y="1400" as="geometry" />
+          <mxGeometry height="90" width="230" x="450" y="1420" as="geometry" />
         </mxCell>
         <mxCell id="noTax" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=12;" value="Asignar montoConImpuesto =&#xa;“No aplica”" vertex="1">
           <mxGeometry height="90" width="230" x="20" y="1405" as="geometry" />
         </mxCell>
-        <mxCell id="output" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCE4D6;strokeColor=#D79B00;fontSize=12;" value="Mostrar montoConvertido y montoConImpuesto&#xa;(console.log)" vertex="1">
-          <mxGeometry height="70" width="280" x="200" y="1635" as="geometry" />
-        </mxCell>
         <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;" value="Fin" vertex="1">
-          <mxGeometry height="50" width="170" x="255" y="1750" as="geometry" />
+          <mxGeometry height="50" width="170" x="220" y="2210" as="geometry" />
         </mxCell>
         <mxCell id="note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=11;align=left;" value="Nota: si la opción no es válida, la tasa queda en 0; el programa informa el error, pero continúa solicitando el monto y ejecuta el cálculo." vertex="1">
           <mxGeometry height="90" width="350" x="1660" y="115" as="geometry" />
@@ -113,17 +118,6 @@
         </mxCell>
         <mxCell id="e11" edge="1" parent="1" source="taxCheck" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="noTax" value="No">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e12" edge="1" parent="1" source="taxCalc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="output">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e13" edge="1" parent="1" source="noTax" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="output">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e14" edge="1" parent="1" source="output" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="end">
-          <mxGeometry relative="1" x="-0.7419" as="geometry">
-            <mxPoint x="330" y="1685" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="e17" edge="1" parent="1" source="convertEntry" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="multiply">
           <mxGeometry relative="1" as="geometry" />
@@ -447,6 +441,56 @@
         </mxCell>
         <mxCell id="lj0MMA0dUC71uExexAyL-47" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;" value="Fin procedimiento" vertex="1">
           <mxGeometry height="50" width="170" x="2621" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-4" edge="1" parent="1" source="sjjGBm7Yn_UY-a6S30rn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="sjjGBm7Yn_UY-a6S30rn-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-1" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=13;" value="respuesta" vertex="1">
+          <mxGeometry height="70" width="360" x="145" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-5" edge="1" parent="1" source="sjjGBm7Yn_UY-a6S30rn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-8" connectable="0" parent="sjjGBm7Yn_UY-a6S30rn-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="No" vertex="1">
+          <mxGeometry relative="1" x="-0.421" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-9" edge="1" parent="1" source="sjjGBm7Yn_UY-a6S30rn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" x="-0.1767" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="2090" />
+              <mxPoint x="860" y="490" />
+            </Array>
+            <mxPoint x="350" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=13;" value="respuesta = &#39;1&#39;" vertex="1">
+          <mxGeometry height="100" width="170" x="220" y="2040" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-22" edge="1" parent="1" source="sjjGBm7Yn_UY-a6S30rn-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="sjjGBm7Yn_UY-a6S30rn-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-11" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" value="Mostrar montoConvertido y montoConImpuesto&lt;br&gt;(console.log)" vertex="1">
+          <mxGeometry height="110" width="170" x="250" y="1655" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-16" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="noTax" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.02" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="1590" />
+            </Array>
+            <mxPoint x="340" y="1590" as="sourcePoint" />
+            <mxPoint x="550" y="1590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-19" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.document2;whiteSpace=wrap;size=0.25;" value="Ingrese 1 para continuar" vertex="1">
+          <mxGeometry height="110" width="170" x="240" y="1810" as="geometry" />
+        </mxCell>
+        <mxCell id="sjjGBm7Yn_UY-a6S30rn-26" edge="1" parent="1" source="sjjGBm7Yn_UY-a6S30rn-19" style="endArrow=classic;html=1;rounded=0;exitX=0.494;exitY=0.906;exitDx=0;exitDy=0;exitPerimeter=0;" target="sjjGBm7Yn_UY-a6S30rn-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="1860" as="sourcePoint" />
+            <mxPoint x="550" y="1810" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
